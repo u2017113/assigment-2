@@ -30,6 +30,7 @@ jobs:
       working-directory: myapp
     - run: npm test
       working-directory: myapp  
+      
     - name: Deploy
       working-directory: myapp
       run: |
