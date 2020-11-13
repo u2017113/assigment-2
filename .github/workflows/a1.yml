@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2 # Check out your repository
     - run: yarn # Install dependencies
-      working directory" myapp
+      working director: myapp
     - run: yarn test --coverage # Run test
-      working directory" myapp
+      working directory: myapp
     - run: bash <(curl -s https://codecov.io/bash) # Upload to Codecov
-      working directory" myapp
+      working directory: myapp
