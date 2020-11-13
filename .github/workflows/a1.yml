@@ -1,0 +1,17 @@
+# .github/workflows/codecov-test-suites.yml
+
+name: Run Test Suites
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2 # Check out your repository
+    - run: yarn # Install dependencies
+      working directory" myapp
+    - run: yarn test --coverage # Run test
+      working directory" myapp
+    - run: bash <(curl -s https://codecov.io/bash) # Upload to Codecov
+      working directory" myapp
